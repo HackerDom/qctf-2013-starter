@@ -1,0 +1,150 @@
+*
+{
+	font: 13px Tahoma;
+}
+
+body
+{
+}
+
+form
+{
+	text-align: center;
+	margin-top: 20px;
+}
+
+#gallery
+{
+	margin: 20px auto 0;
+	padding: 0 0 10px 10px;
+	width: 920px;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: rgba(93,93,107,.8);
+}
+
+.photo
+{
+	width: 210px;
+	height: 185px;
+	background: #e9e9e9;
+	padding: 10px 0 0 10px;
+	margin: 10px 10px 0 0;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 5px rgba(198, 196, 198, 0.75);
+	-moz-box-shadow:    0px 0px 5px rgba(198, 196, 198, 0.75);
+	box-shadow:         0px 0px 5px rgba(198, 196, 198, 0.75);
+	background: black;
+	color: white;
+}
+
+.photo > img
+{
+	display: block;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.description
+{
+	width: 200px;
+	text-align: center;
+}
+
+.description.none {
+	color: gray !important;
+}
+
+/* кнопки */
+
+.fileform { 
+    background-color: #FFFFFF;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 26px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 330px;
+	display: inline-block;
+}
+ 
+.fileform .selectbutton { 
+    background-color: #B47E3C;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    height: 22px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 2px 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+	font-size: 13px;
+}
+ 
+.fileform #upload{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    -moz-opacity: 0; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    font-size: 150px; 
+    height: 30px; 
+    z-index:20;
+}
+
+.fileform #fileformlabel { 
+background-color: #FFFFFF;
+float: left;
+height: 22px;
+line-height: 22px;
+overflow: hidden;
+padding: 2px;
+text-align: left;
+vertical-align: middle;
+width:160px;
+}
+
+.sendbutton { 
+    background-color: #52862D;
+    border-radius: 2px;
+	border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    height: 26px;
+    overflow: hidden;
+    padding: 2px 6px;
+	padding-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+	display: inline-block;
+	font-size: 13px;
+}
+
+.sendbutton:hover
+{
+	-webkit-box-shadow: 0px 0px 26px rgba(194, 207, 50, 0.75) inset;
+	-moz-box-shadow:    0px 0px 26px rgba(194, 207, 50, 0.75) inset;
+	box-shadow:         0px 0px 26px rgba(194, 207, 50, 0.75) inset;
+}
+
+.fileform:hover .selectbutton
+{
+	-webkit-box-shadow: 0px 0px 26px rgba(255, 182, 131, 0.75) inset;
+	-moz-box-shadow:    0px 0px 26px rgba(255, 182, 131, 0.75) inset;
+	box-shadow:         0px 0px 26px rgba(255, 182, 131, 0.75) inset;
+}
