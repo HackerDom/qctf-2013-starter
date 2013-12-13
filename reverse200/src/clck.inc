@@ -1,0 +1,8 @@
+IDD_MAIN		equ 100
+IDC_STATIC_TIME		equ 101
+
+
+LWA_COLORKEY		equ 1
+LWA_ALPHA		equ 2
+
+SetLayeredWindowAttributes	PROTO :DWORD,:DWORD,:DWORD,:DWORD
