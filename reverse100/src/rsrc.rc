@@ -1,0 +1,21 @@
+1 versioninfo
+fileversion 0,3,0,0
+productversion 0,3,0,0
+fileos 0x4
+filetype 0x1
+{
+	block "StringFileInfo"
+	{
+		block "040904e4"
+		{
+			value "Author Name", "unknown"
+			value "FileDescription", "Hmm, no flags here, keep looking!"
+			value "FileVersion", "0.1"
+		}
+	}
+
+	block "VarFileInfo"
+	{
+		value "Translation", 0x0409 0x04e4
+	}
+}
