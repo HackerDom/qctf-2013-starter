@@ -3,5 +3,3 @@ AddDefaultCharset UTF-8
 RewriteEngine On
 RewriteBase /
 RewriteRule ^image/(.+)$  web100/getimage1337.php?id=$1
-
-# flag is: yes_you_found_a_flag

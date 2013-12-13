@@ -2,15 +2,15 @@
 
 error_reporting(0);
 
-$database = "test";
+$database = "qctf_web";
 $hostname = "localhost";
-$root_username = 'root';
-$root_password = '';
+$username = 'user_web100';
+$password = '282b4697238e9f3e2e1fc7e79fbb11a2';
 
 $id = $_GET['id'];
 
-@$dbhandle = mysql_connect($hostname, $username, $password) or die('MySQL error');
-@$selected = mysql_select_db($database, $dbhandle) or die('MySQL error');
+$dbhandle = mysql_connect($hostname, $username, $password) or die(mysql_error());
+$selected = mysql_select_db($database, $dbhandle) or die(mysql_error());
 @$result = mysql_query("SELECT url FROM images WHERE id=$id", $dbhandle) or die('MySQL error');
 
 $a = @mysql_fetch_array($result) or die('error');

@@ -9,3 +9,9 @@ function getName (str){
     var uploaded = document.getElementById("fileformlabel");
     uploaded.innerHTML = filename;
 }
+
+$(function(){
+	$('#selectbutton').click(function() {
+		$('#upload').click();
+	});
+});

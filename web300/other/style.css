@@ -1,0 +1,10 @@
+.name {
+	font-weight: bold;
+}
+
+.message {
+	width: 415px;
+	margin: auto;
+	word-wrap: break-word;
+	margin-top: 10px;
+}
