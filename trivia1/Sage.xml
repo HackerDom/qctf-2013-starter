@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Sage" id="Sage:50" proto="xmlquest-1.0">
     <name>Мудрец</name>
-    <task type="html">Один мудрец <a href="/static/91eb51ee3681975864f8071cbd52e00a/picture.gif">сказал...</a></task>
+    <task type="html"><p>Один мудрец <a href="/static/80eb51ee3681975864f8071cbd52e00a/picture.png">сказал</a>...</p></task>
     <checker strict="yes">
         <solution case="insensitive">key51f2ea12dd41eb91599a</solution>
     </checker>
