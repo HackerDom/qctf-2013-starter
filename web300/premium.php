@@ -15,7 +15,7 @@ try {
 if ($session->get_money() < 1000000000) {
 	echo 'Недостаточно денег.';
 } else {
-	echo 'yes_you_found_a_flag';
+	echo 'key9d97ca92b443358f8d92';
 }
 
 ?>
