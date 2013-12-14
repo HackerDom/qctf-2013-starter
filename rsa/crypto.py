@@ -2,6 +2,7 @@
 
 from sys import *
 from http.server import SimpleHTTPRequestHandler
+import json
 import socketserver
 from Crypto.Util.number import *
 from Crypto.PublicKey import RSA
@@ -91,13 +92,11 @@ def keyToString(key):
 		res += 'PRIVATE'
 	else:
 		res += 'PUBLIC'
-	res += ' RSA KEY ###\n{\n'
-	res += '\t"n": ' + str(key.n) + ',\n'
-	res += '\t"e": ' + str(key.e) + '\n'
+	res += ' RSA KEY ###\n'
+	dic = {'n' : key.n, 'e' : key.e}
 	if key.has_private():
-		res += ',\t"d": ' + str(key.d) + '\n'
-	res += "}\n"
-	return res
+		dic['d'] = key.d
+	return res + json.dumps(dic)
 
 def startServer(port):
 	httpd = socketserver.TCPServer(("", port), Handler)

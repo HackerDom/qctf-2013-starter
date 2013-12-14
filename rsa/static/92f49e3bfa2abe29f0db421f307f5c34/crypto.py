@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from sys import *
 from http.server import SimpleHTTPRequestHandler
+import json
 import socketserver
 from Crypto.Util.number import *
 from Crypto.PublicKey import RSA
@@ -10,7 +11,7 @@ from urllib.parse import urlparse
 KEY_LENGTH = 512
 EXP_LENGTH = 256
 PASSWORD = b"dLzjWZ5gj/X+PZHv8+UeiQRK9zzOj/2Nf5CU90SSWtqEm3/jKpEK/o1QsSbTlYDuahgIVZbj"
-PORT = 8000
+PORT = 80
 p = getPrime(KEY_LENGTH)
 q = getPrime(KEY_LENGTH)
 
@@ -91,13 +92,11 @@ def keyToString(key):
 		res += 'PRIVATE'
 	else:
 		res += 'PUBLIC'
-	res += ' RSA KEY ###\n{\n'
-	res += '\t"n": ' + str(key.n) + ',\n'
-	res += '\t"e": ' + str(key.e) + '\n'
+	res += ' RSA KEY ###\n'
+	dic = {'n' : key.n, 'e' : key.e}
 	if key.has_private():
-		res += ',\t"d": ' + str(key.d) + '\n'
-	res += "}\n"
-	return res
+		dic['d'] = key.d
+	return res + json.dumps(dic)
 
 def startServer(port):
 	httpd = socketserver.TCPServer(("", port), Handler)
