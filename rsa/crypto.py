@@ -3,14 +3,13 @@
 from sys import *
 from http.server import SimpleHTTPRequestHandler
 import socketserver
-from Crypto.Random.random import StrongRandom
 from Crypto.Util.number import *
 from Crypto.PublicKey import RSA
-from urllib.parse import urlparse, quote_from_bytes, unquote_to_bytes
+from urllib.parse import urlparse
 
 KEY_LENGTH = 512
 EXP_LENGTH = 256
-PASSWORD = bytes("dLzjWZ5gj/X+PZHv8+UeiQRK9zzOj/2Nf5CU90SSWtqEm3/jKpEK/o1QsSbTlYDuahgIVZbj", "UTF-8")
+PASSWORD = b"dLzjWZ5gj/X+PZHv8+UeiQRK9zzOj/2Nf5CU90SSWtqEm3/jKpEK/o1QsSbTlYDuahgIVZbj"
 p = getPrime(KEY_LENGTH)
 q = getPrime(KEY_LENGTH)
 
@@ -40,10 +39,10 @@ def sendIndex(s):
 	s.send_response(200, "OK")
 	s.send_header("Content-type", "text/html")
 	s.end_headers()
-	s.wfile.write(bytes("<a href='/'>home</a><br>", "UTF-8"))
-	s.wfile.write(bytes("<a href='/public'>get server's public key</a><br>", "UTF-8"))
-	s.wfile.write(bytes("<a href='/generate'>generate new RSA key pair</a><br>", "UTF-8"))
-	s.wfile.write(bytes("<a href='/key'>get key file (need admin permition)</a><br>", "UTF-8"))
+	s.wfile.write(b"<a href='/'>home</a><br>")
+	s.wfile.write(b"<a href='/public'>get server's public key</a><br>")
+	s.wfile.write(b"<a href='/generate'>generate new RSA key pair</a><br>")
+	s.wfile.write(b"<a href='/key'>get key file (need admin permition)</a><br>")
 
 def sendNewKeyPair(s):
 	s.send_response(200, "OK")
@@ -62,12 +61,12 @@ def sendGetKey(s, sign):
 		s.send_response(200, "OK")
 		s.send_header("Content-type", "text/plain")
 		s.end_headers()
-		s.wfile.write(bytes(key, "UTF-8"))
+		s.wfile.write(key)
 	else:
 		s.send_response(403, "Forbidden")
 		s.send_header("Content-type", "text/plain")
 		s.end_headers()
-		s.wfile.write(bytes("403 Forbidden", "UTF-8"))
+		s.wfile.write(b"403 Forbidden")
 
 def isInt(s):
 	try:
@@ -94,10 +93,11 @@ if len(sys.argv) < 3:
 	exit(1)
 
 keyFile = open(sys.argv[1])
-key = keyFile.read().strip()
+key = keyFile.read().strip().encode()
 
 serverKey = generateKeyPair()
-print(serverKey.exportKey())
+print(serverKey.exportKey().decode())
 serverKey = serverKey.publickey()
 
+print()
 startServer(int(sys.argv[2]))
