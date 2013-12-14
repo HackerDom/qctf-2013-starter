@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-        <title>web100</title>
+        <title>Cats web service >.<</title>
         <meta charset="utf-8">
 </head>
 <body>
@@ -15,5 +15,5 @@
 </html>
 
 <?php
-// key98566c12b176b723a84c
+// flag is: yes_you_found_a_flag
 ?>
