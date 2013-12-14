@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="clock" id="clock:100" proto="xmlquest-1.0">
+    <name>Часы</name>
+    <task type="html"><p>Вcем привет!</p><p>У нас здесь небольшие, но очень крутые настольные <a href="/static/e46b77a95b46864e720c581a0576546e/clock.zip">часы</a>. Мы хотели бы ими воспользоваться, но автор такой жадный. Он встроил некоторую систему защиты. Помогите нам, у нас нет денег, чтобы купить эти часы. Plsss ^_^</p><p>P.S. Лицензия позволяет взламывать программу</task>
+    <checker strict="yes">
+        <solution case="insensitive">key1dc57f47104ac146</solution>
+    </checker>
+</quest>
