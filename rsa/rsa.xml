@@ -3,6 +3,6 @@
     <name>Взлом RSA</name>
     <task type="html">Похоже хозяин этого <a href="http://rsa.qctf.ru/" target="blank">сервера</a> полностью уверен в его защищённости. Убедите его в обратном. Мы уже сумели скачать <a href="/static/92f49e3bfa2abe29f0db421f307f5c34/crypto.py">код сервера</a>. Ваша задача - получить содержимое файла key.txt</task>
     <checker strict="yes">
-        <solution case="insensitive">key: run away</solution>
+        <solution case="insensitive">keyc9b7cf48c650800210f8</solution>
     </checker>
 </quest>

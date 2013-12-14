@@ -3,6 +3,6 @@
     <name>Звуки шума</name>
     <task type="html">Всегда ли <a href="/static/6afcf6579ca50e043b70365262eff7fc/noise.wav">шум</a> просто шум? А может в нём скрывается какой-то ключ от частички мироздания?</task>
     <checker strict="yes">
-        <solution case="insensitive">sound of noise, listen it :-)</solution>
+        <solution case="insensitive">key2a5d0824c07151f44eea</solution>
     </checker>
 </quest>
