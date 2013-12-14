@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="WhiteSquare" id="WhiteSquare:100" proto="xmlquest-1.0">
     <name>Белый квадрат</name>
-    <task type="html">Просто <a href="/static/91eb51ee3681975864f8071cbd52e00a/picture.gif">белый квадрат</a>. Ничего интересного.</task>
+    <task type="html"><p>Просто <a href="/static/91eb51ee3681975864f8071cbd52e00a/picture.gif">белый квадрат</a>. Ничего интересного.</p></task>
     <checker strict="yes">
         <solution case="insensitive">keyaa956e7549bb1b98043a</solution>
     </checker>

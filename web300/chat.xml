@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest series="chat" id="chat:100" proto="xmlquest-1.0">
+<quest series="Chat" id="Chat:100" proto="xmlquest-1.0">
     <name>Чат</name>
-    <task type="text">Просто ативируйте премиум аккаунт в <a href="http://chat.qctf.ru/">чате</a>.</task>
+    <task type="html"><p>Просто ативируйте премиум аккаунт в <a href="http://chat.qctf.ru/">чате</a>.</p></task>
     <checker strict="yes">
         <solution case="insensitive">key9d97ca92b443358f8d92</solution>
     </checker>

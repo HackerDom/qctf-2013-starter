@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="HelloWorld" id="HelloWorld:100" proto="xmlquest-1.0">
     <name>Hello, World!</name>
-    <task type="html">Hello, World! Или что-то большее? Найдите спрятанный флаг в <a href="/static/b89f6108203ce561e075a5e406f93d0c/small.exe">этой</a> маленькой программе </task>
+    <task type="html"><p>Hello, World! Или что-то большее? Найдите спрятанный флаг в <a href="/static/b89f6108203ce561e075a5e406f93d0c/small.exe">этой</a> маленькой программе.</p></task>
     <checker strict="yes">
         <solution case="insensitive">key00869c845e13f89a</solution>
     </checker>
