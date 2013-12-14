@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="picture" id="picture:100" proto="xmlquest-1.0">
     <name>Картина</name>
-    <task type="html">Просто <a href="static/91eb51ee3681975864f8071cbd52e00a/picture.gif">пустой холст</a>. Ничего интересного.</task>
+    <task type="html">Просто <a href="/static/91eb51ee3681975864f8071cbd52e00a/picture.gif">пустой холст</a>. Ничего интересного.</task>
     <checker strict="yes">
         <solution case="insensitive">go and be free</solution>
     </checker>

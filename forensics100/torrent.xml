@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="torrent" id="torrent:100" proto="xmlquest-1.0">
     <name>Торрент</name>
-    <task type="html">Вам в руки попал странный <a href="static/6a4e40a4dd67c444fd9b3e9b51afb976/task.torrent">торрент файл</a>. Похоже, пользователь, его создавший, был столь неаккуратен, что забыл удалить файл с пин-кодом. Ваша задача проста - суметь прочитать его.</task>
+    <task type="html">Вам в руки попал странный <a href="/static/6a4e40a4dd67c444fd9b3e9b51afb976/task.torrent">торрент файл</a>. Похоже, пользователь, его создавший, был столь неаккуратен, что забыл удалить файл с пин-кодом. Ваша задача проста - суметь прочитать его.</task>
     <checker strict="yes">
         <solution case="insensitive">3913</solution>
     </checker>
