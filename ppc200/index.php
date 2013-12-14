@@ -97,7 +97,7 @@ if (
 	if (test_sudoku($_GET['solution'], $levels[$_SESSION['level'] - 1], $_SESSION['data'])) {
 		if ($delay < 120) {
 			if ($_SESSION['level'] === 8) {
-				die('yes_you_found_a_flag');
+				die('keyc1335e22834c27554f55');
 			}
 			//
 			$message = $messages[2];

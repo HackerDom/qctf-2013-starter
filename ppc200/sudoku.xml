@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="sudoku" id="sudoku:100" proto="xmlquest-1.0">
+    <name>Судоку</name>
+    <task type="html">Только истинный мастер <a href="http://sudoku.qctf.ru/">судоку</a> сможет получить ключ.</task>
+    <checker strict="yes">
+        <solution case="insensitive">keyc1335e22834c27554f55</solution>
+    </checker>
+</quest>
