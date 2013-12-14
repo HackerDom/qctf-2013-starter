@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="task_name" id="task_name:100" proto="xmlquest-1.0">
+    <name>NAME</name>
+    <task type="text">DESCRIPTION</task>
+    <checker strict="yes">
+        <solution case="insensitive">ANSWER</solution>
+    </checker>
+</quest>
