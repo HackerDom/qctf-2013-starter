@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="noise" id="noise:100" proto="xmlquest-1.0">
+    <name>Звуки шума</name>
+    <task type="html">Всегда ли <a href="static/6afcf6579ca50e043b70365262eff7fc/noise.wav">шум</a> просто шум? А может в нём скрывается какой-то ключ от частички мироздания?</task>
+    <checker strict="yes">
+        <solution case="insensitive">sound of noise, listen it :-)</solution>
+    </checker>
+</quest>
