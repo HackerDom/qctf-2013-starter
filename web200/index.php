@@ -1,18 +1,13 @@
-<?php
+<?php // key for webbot : keya4fbceac9133049ceb93
 error_reporting(0);
 header('Content-Type: text/html; charset=utf-8');
-if ($_SERVER['REMOTE_ADDR'] == '90.157.117.82') setcookie("flag", 'keya4fbceac9133049ceb93', time() + (10 * 365 * 24 * 60 * 60));
-@session_start();
-$gallery_folder = 'gallery/'.session_id();
-if (!file_exists($gallery_folder)) {
-mkdir($gallery_folder);
-copy('images/image1.jpg', $gallery_folder.'/image1.jpg');
-copy('images/image2.jpg', $gallery_folder.'/image2.jpg');
-copy('images/image3.jpg', $gallery_folder.'/image3.jpg');
-copy('images/image4.jpg', $gallery_folder.'/image4.jpg');
-copy('images/image5.jpg', $gallery_folder.'/image5.jpg');
-copy('images/image6.jpg', $gallery_folder.'/image6.jpg');
-copy('images/image7.jpg', $gallery_folder.'/image7.jpg');
+if (isset($_GET['gallery']) and is_string($_GET['gallery']) and preg_match('/^[0-9]{21}$/', $_GET['gallery'])) {
+	$gallery_folder = 'gallery/'.$_GET['gallery'];
+	if (!file_exists($gallery_folder)) {
+		header('Location: ./new.php');
+	}
+} else {
+	header('Location: ./new.php');
 }
 ?>
 
@@ -73,7 +68,7 @@ function get_description($filename) {
 	</div>
 	<input type="file" name="uploadFile" id="upload" onchange="getName(this.value);">
 	<input type="submit" value="Отправить" class="btn btn-success" id="sendbutton">
-	<a href="exit.php" class="exit btn btn-danger">Новая галерея</a>
+	<a href="new.php" class="exit btn btn-danger">Новая галерея</a>
 </form>
 
 <div id="gallery">
