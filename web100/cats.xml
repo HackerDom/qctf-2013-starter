@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="cats" id="cats:100" proto="xmlquest-1.0">
+    <name>Кошки</name>
+    <task type="html">Только посмотрите на <a href="http://cats.qctf.ru/">этих кошек</a>. Они явно что-то скрывают!</task>
+    <checker strict="yes">
+        <solution case="insensitive">key98566c12b176b723a84c</solution>
+    </checker>
+</quest>

@@ -15,5 +15,5 @@
 </html>
 
 <?php
-// flag is: yes_you_found_a_flag
+// key98566c12b176b723a84c
 ?>
