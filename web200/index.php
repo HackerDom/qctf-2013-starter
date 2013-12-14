@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 header('Content-Type: text/html; charset=utf-8');
-if ($_SERVER['REMOTE_ADDR'] == '90.157.117.82') setcookie("flag", 'yes_you_found_a_flag', time() + (10 * 365 * 24 * 60 * 60));
+if ($_SERVER['REMOTE_ADDR'] == '90.157.117.82') setcookie("flag", 'keya4fbceac9133049ceb93', time() + (10 * 365 * 24 * 60 * 60));
 @session_start();
 $gallery_folder = 'gallery/'.session_id();
 if (!file_exists($gallery_folder)) {

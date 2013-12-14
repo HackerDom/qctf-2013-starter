@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="gallery" id="gallery:100" proto="xmlquest-1.0">
+    <name>Галерея</name>
+    <task type="html">Возможно, в <a href="http://gallery.qctf.ru/">этой</a> галерее о других пользователях можно узнать немного больше, чем просто места отдыха.</task>
+    <checker strict="yes">
+        <solution case="insensitive">keya4fbceac9133049ceb93</solution>
+    </checker>
+</quest>
