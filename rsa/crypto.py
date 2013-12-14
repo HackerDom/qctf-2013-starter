@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 KEY_LENGTH = 512
 EXP_LENGTH = 256
 PASSWORD = b"dLzjWZ5gj/X+PZHv8+UeiQRK9zzOj/2Nf5CU90SSWtqEm3/jKpEK/o1QsSbTlYDuahgIVZbj"
+PORT = 80
 p = getPrime(KEY_LENGTH)
 q = getPrime(KEY_LENGTH)
 
@@ -88,16 +89,11 @@ def startServer(port):
 	httpd = socketserver.TCPServer(("", port), Handler)
 	httpd.serve_forever()
 
-if len(sys.argv) < 3:
-	print("usage: %s key port" % sys.argv[0], file=sys.stderr)
-	exit(1)
-
-keyFile = open(sys.argv[1])
-key = keyFile.read().strip().encode()
+key = open('key.txt').read().strip().encode()
 
 serverKey = generateKeyPair()
 print(serverKey.exportKey().decode())
 serverKey = serverKey.publickey()
 
 print()
-startServer(int(sys.argv[2]))
+startServer(PORT)
