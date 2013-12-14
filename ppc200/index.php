@@ -95,7 +95,7 @@ if (
 {
 	$delay = time() - $_SESSION['time'];
 	if (test_sudoku($_GET['solution'], $levels[$_SESSION['level'] - 1], $_SESSION['data'])) {
-		if ($delay < 120) {
+		if ($delay < 2) {
 			if ($_SESSION['level'] === 8) {
 				die('keyc1335e22834c27554f55');
 			}

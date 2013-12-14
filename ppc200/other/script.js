@@ -13,7 +13,8 @@ $('#send').click(function() {
 	$('.piece').each(function() {
 		data += ($(this).html() === '' ? '0' : $(this).html());
 	});
-	window.location = document.URL + "?solution=" + data;
+	base = document.URL.split('?')[0];
+	window.location = base + "?solution=" + data;
 });
 
 });

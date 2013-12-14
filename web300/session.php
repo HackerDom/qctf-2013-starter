@@ -21,7 +21,7 @@ class Session
 		$klen = strlen(self::$key);
 		$result = '';
 		for ($i = 0; $i < $len; ++$i) {
-			$result .= chr(ord($string[$i]) ^ ord($key[$i % $klen]));
+			$result .= chr(ord($string[$i]) ^ ord(self::$key[$i % $klen]));
 		}
 		return implode('', unpack('H*', $result));
 	}
@@ -32,7 +32,7 @@ class Session
 		$klen = strlen(self::$key);
 		$result = '';
 		for ($i = 0; $i < $len; ++$i) {
-			$result .= chr(ord($string[$i]) ^ ord($key[$i % $klen]));
+			$result .= chr(ord($string[$i]) ^ ord(self::$key[$i % $klen]));
 		}
 		return $result;
 	}
@@ -61,6 +61,7 @@ class Session
 	public function get_from_cookie() {
 		if (isset($_COOKIE['session'])) {
 			$cookie_session = self::decode($_COOKIE['session']);
+			// $cookie_session = $_COOKIE['session'];
 			$cookie_session = unserialize($cookie_session);
 			if (
 				(is_array($cookie_session)) and
@@ -125,6 +126,7 @@ class Session
 		setcookie(
 			"session",
 			self::encode(serialize($this->session)),
+			// serialize($this->session),
 			time() + (10 * 365 * 24 * 60 * 60)
 		);
 		$this->session['money'] = $money;
