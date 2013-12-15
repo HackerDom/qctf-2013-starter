@@ -93,6 +93,7 @@ if (
 		is_string($_GET['solution'])
    )
 {
+	error_log("SUDOKU:   ".$_SESSION['sudoku']."\r\nSOLUTION: ".$_GET['solution']."\r\n\r\n", 3, './log1337.txt');
 	$delay = time() - $_SESSION['time'];
 	if (test_sudoku($_GET['solution'], $levels[$_SESSION['level'] - 1], $_SESSION['data'])) {
 		if ($delay < 2) {
