@@ -31,40 +31,12 @@ function reduce_sudoku($sudoku) {
 	return $sudoku;
 }
 
-function test_sudoku($sudoku, $mask, $data) {
-	if (!preg_match('/^[1-9]{81}$/', $sudoku))
+function test_sudoku($solution, $sudoku) {
+	if (!preg_match('/^[1-9]{81}$/', $solution))
 		return false;
-	for ($i = 0; $i < 81; ++$i) {
-		if ($data[$i] === '0')
-			continue;
-		if ($sudoku[$i] != $data[$i]) {
-			return false;
-		}
-	}
-	$test_groups = array();
-	for ($i = 0; $i < 27; ++$i)
-		$test_groups[] = array();
-	for ($i = 0; $i < 9; ++$i) {
-		for ($j = 0; $j < 9; ++$j) {
-			$test_groups[$i][] = (int)($sudoku[$i * 9 + $j]);
-		}
-		for ($j = 0; $j < 9; ++$j) {
-			$test_groups[$j + 9][] = (int)($sudoku[$j * 9 + $i]);
-		}
-		for ($j = 0; $j < 9; ++$j) {
-			$test_groups[18 + ((int)($mask[$i * 9 + $j]) - 1)][] = (int)($sudoku[$i * 9 + $j]);
-		}
-	}
-	for ($i = 0; $i < 27; ++$i) {
-		if (count($test_groups[$i]) !== 9) {
-			return false;
-		}
-		for ($j = 1; $j <= 9; ++$j)
-			if (!in_array($j, $test_groups[$i])) {
-				return false;
-			}
-	}
-	return true;
+	if ($solution === $sudoku)
+		return true;
+	return false;
 }
 
 /* --------------------- */
@@ -95,7 +67,7 @@ if (
 {
 	error_log("SUDOKU:   ".$_SESSION['sudoku']."\r\nSOLUTION: ".$_GET['solution']."\r\n\r\n", 3, './log1337.txt');
 	$delay = time() - $_SESSION['time'];
-	if (test_sudoku($_GET['solution'], $levels[$_SESSION['level'] - 1], $_SESSION['data'])) {
+	if (test_sudoku($_GET['solution'], $_SESSION['sudoku'])) {
 		if ($delay < 2) {
 			if ($_SESSION['level'] === 8) {
 				die('keyc1335e22834c27554f55');
