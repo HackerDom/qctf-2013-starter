@@ -1,0 +1,121 @@
+*
+{
+	font: 13px Tahoma;
+}
+
+#content
+{
+	width: 440px;
+	height: 490px;
+	padding: 5px;
+	position: absolute;
+	left: 50%;
+	margin-left: -225px;
+	margin-top: 15px;
+	border: 1px solid black;
+}
+
+#level
+{
+	float: left;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+#badmessage
+{
+	float: right;
+	color: red;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+#goodmessage
+{
+	float: right;
+	color: #65C44F;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+#sudoku
+{
+	overflow: hidden;
+	margin: 40px auto 0;
+	background: #eee;
+	width: 414px;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#send
+{
+	float: right;
+	margin: 12px 17px 0 0;
+	cursor: pointer;
+	color: blue;
+}
+#send:hover
+{
+	text-decoration: underline;
+}
+
+.piece
+{
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	float: left;
+	line-height: 45px;
+	font-size: 17px;
+}
+
+.unlocked
+{
+	color: white;
+}
+
+.red
+{
+	background: #C45D4F;
+}
+.green
+{
+	background: #587E2A;
+}
+.blue
+{
+	background: #2D6A86;
+}
+.yellow
+{
+	background: #B1B83D;
+}
+.violet
+{
+	background: #993397;
+}
+.lightblue
+{
+	background: #81D5BD;
+}
+.white
+{
+	background: #6E79CF;
+}
+.brown
+{
+	background: #7E642A;
+}
+.pink
+{
+	background: #CDB86A;
+}
